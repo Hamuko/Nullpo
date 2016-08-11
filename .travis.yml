@@ -1,0 +1,23 @@
+language: objective-c
+osx_image: xcode7.3
+before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+install:
+- agvtool new-version -all $TRAVIS_BUILD_NUMBER
+- agvtool new-marketing-version `git describe --tags --abbrev=0`
+- carthage bootstrap --verbose
+- xcodebuild
+before_deploy:
+- brew install zopfli
+- cd build/Release
+- tar -cvf Nullpo.tar Nullpo.app
+- zopfli Nullpo.tar
+deploy:
+  provider: releases
+  file: Nullpo.tar.gz
+  skip_cleanup: true
+  on:
+    tags: true
+  api-key:
+    secure: SC+fqxPBdOtBT1HYAa2yNu1I57tTd+lG7z/PCLi0xrGHuoTR5jO9AvhWn9rqnVt2OiOunw5PIcCzvWYX0qdcdraO/l8L8OYk29aV7E/jzBUSTtrNEkpvgUCOV72KXOqKIvShkNVypKSdyKgoIQSoRPqsNCeuqEnmXkbtdGKBQXkuwqUhrWxmUWEde9VZ5Njw1Wdo1HEi3Yc6PBOtcIJ6SWVcGDwFbV6ZYT8odBAI+TfeJtutOzvUnoUGsVLIWhMIvG0qENjqRabyKQ8skcqx/VrhGmVvr9eRQ9gNFlKTUDdAhDQm+WY9SrmCf63ptochYgDyXBKloaXfJFF75iXriAxdSm1cxYrV/vAqxrn41NAwmTqH5UZuTsgZko+JsNww0LZJP+abEnxRfA/TRNlS0J3uTp2fKGq93kH1FuXREeQtR1qMjfRe/FSsfulkd6cyvOThTdunZmojt0pd12xACG545zKFf9heMFw8Z3m6OejUnPK5aPr0vVh98hjXxl5JNpTwV7Yfz4lbgZFbult/Q3gYfqyUvOfRrydnnsDYe3V8wsvZ209hYjZCR6pCTry+lXYOBjWxYrR+hpoGvgdwpgiju3ZuXsiIDiSV5jcERlbjSTXumcnNDnLJ1QQxnhh/DLjmEIaJNuTowYZBpJUsdml835FWkWVvnLyZUB8oqfE=
