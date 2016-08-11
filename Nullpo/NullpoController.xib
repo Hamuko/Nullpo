@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NullpoController" customModule="Nullpo" customModuleProvider="target">
+            <connections>
+                <outlet property="fileStorage" destination="PAh-lX-VDu" id="PAJ-2S-Xw6"/>
+                <outlet property="fileTable" destination="rjE-YX-agH" id="YDn-XB-bin"/>
+                <outlet property="progressBar" destination="Tg5-Zm-su0" id="0M1-xh-wyX"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Nullpo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="200" height="262"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <value key="minSize" type="size" width="200" height="262"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="262"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lla-gH-aCa" customClass="DraggingZone" customModule="Nullpo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="22" width="200" height="240"/>
+                        <subviews>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGU-nR-ZBb">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="240"/>
+                                <clipView key="contentView" id="aff-EE-pq6">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="240"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" rowHeight="20" viewBased="YES" id="rjE-YX-agH">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="0.0"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn editable="NO" width="197" minWidth="48" maxWidth="1000" id="49a-6X-zHA">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="TII-EP-gKz">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView id="vD9-xp-IeR" customClass="FileListCell" customModule="Nullpo" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="197" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ats-Wj-qUx">
+                                                                    <rect key="frame" x="156" y="1" width="39" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="39" id="bc7-tc-w4E"/>
+                                                                    </constraints>
+                                                                    <buttonCell key="cell" type="inline" title="copy" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="mQN-rR-OCT">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" metaFont="smallSystemBold"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="copyURL:" target="vD9-xp-IeR" id="Aap-IB-1aj"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Rzv-GW-jsE">
+                                                                    <rect key="frame" x="0.0" y="2" width="156" height="17"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" placeholderString="File URL" id="lIY-0L-lYB">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Rzv-GW-jsE" firstAttribute="top" secondItem="vD9-xp-IeR" secondAttribute="top" constant="1" id="9at-Vc-1YF"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Rzv-GW-jsE" secondAttribute="bottom" constant="2" id="Cfd-SL-Hrw"/>
+                                                                <constraint firstItem="ats-Wj-qUx" firstAttribute="leading" secondItem="Rzv-GW-jsE" secondAttribute="trailing" constant="2" id="Ftx-ns-CVz"/>
+                                                                <constraint firstItem="Rzv-GW-jsE" firstAttribute="leading" secondItem="vD9-xp-IeR" secondAttribute="leading" constant="2" id="Juk-MZ-hNj"/>
+                                                                <constraint firstItem="ats-Wj-qUx" firstAttribute="top" secondItem="vD9-xp-IeR" secondAttribute="top" constant="2" id="bM5-TY-MTB"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ats-Wj-qUx" secondAttribute="trailing" constant="2" id="eu6-op-gW9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ats-Wj-qUx" secondAttribute="bottom" constant="2" id="mAY-u8-TVt"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="fileURL" destination="Rzv-GW-jsE" id="JTV-hX-qSL"/>
+                                                                <outlet property="textField" destination="Rzv-GW-jsE" id="oU1-fe-c0l"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="PAh-lX-VDu" id="4Zx-56-joY"/>
+                                                <outlet property="delegate" destination="PAh-lX-VDu" id="j5F-d0-KSF"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Ued-C7-WDq">
+                                    <rect key="frame" x="0.0" y="-16" width="0.0" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="0J1-ju-p4I">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <customView hidden="YES" wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j0B-2e-o5K" customClass="DraggingIndicator" customModule="Nullpo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="10" width="161" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Bef-67-lOg"/>
+                                    <constraint firstAttribute="width" constant="161" id="KxB-kQ-nr6"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="GGU-nR-ZBb" firstAttribute="leading" secondItem="lla-gH-aCa" secondAttribute="leading" id="99U-UP-upz"/>
+                            <constraint firstAttribute="trailing" secondItem="GGU-nR-ZBb" secondAttribute="trailing" id="ZAJ-zc-hwd"/>
+                            <constraint firstItem="j0B-2e-o5K" firstAttribute="centerX" secondItem="lla-gH-aCa" secondAttribute="centerX" id="fj4-fn-3Ss"/>
+                            <constraint firstAttribute="bottom" secondItem="GGU-nR-ZBb" secondAttribute="bottom" id="muZ-ki-e6X"/>
+                            <constraint firstItem="j0B-2e-o5K" firstAttribute="centerY" secondItem="lla-gH-aCa" secondAttribute="centerY" id="pts-Pm-qIx"/>
+                            <constraint firstItem="GGU-nR-ZBb" firstAttribute="top" secondItem="lla-gH-aCa" secondAttribute="top" id="xpO-VC-umg"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="dragIndicator" destination="j0B-2e-o5K" id="arO-hx-krL"/>
+                            <outlet property="nullpoController" destination="-2" id="bpF-En-VZM"/>
+                        </connections>
+                    </customView>
+                    <progressIndicator hidden="YES" wantsLayer="YES" maxValue="100" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Tg5-Zm-su0">
+                        <rect key="frame" x="10" y="5" width="180" height="12"/>
+                    </progressIndicator>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lla-gH-aCa" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="6Af-Sg-htx"/>
+                    <constraint firstItem="Tg5-Zm-su0" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="10" id="ZPw-zT-iRH"/>
+                    <constraint firstItem="lla-gH-aCa" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="jBl-hm-4eD"/>
+                    <constraint firstAttribute="trailing" secondItem="lla-gH-aCa" secondAttribute="trailing" id="l7A-Oe-ziY"/>
+                    <constraint firstAttribute="trailing" secondItem="Tg5-Zm-su0" secondAttribute="trailing" constant="10" id="qTI-Va-5Ak"/>
+                    <constraint firstAttribute="bottom" secondItem="Tg5-Zm-su0" secondAttribute="bottom" constant="5" id="xx1-By-DD8"/>
+                    <constraint firstAttribute="bottom" secondItem="lla-gH-aCa" secondAttribute="bottom" constant="22" id="zCC-gg-SZh"/>
+                </constraints>
+            </view>
+            <contentBorderThickness minY="22"/>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="538" y="471"/>
+        </window>
+        <customObject id="PAh-lX-VDu" customClass="FileListData" customModule="Nullpo" customModuleProvider="target">
+            <connections>
+                <outlet property="fileTable" destination="rjE-YX-agH" id="hIc-0g-Jez"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>

@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		810A11A01CF1DEFA0043C04C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A119F1CF1DEFA0043C04C /* AppDelegate.swift */; };
+		810A11A21CF1DEFB0043C04C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 810A11A11CF1DEFB0043C04C /* Assets.xcassets */; };
+		810A11A51CF1DEFB0043C04C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810A11A31CF1DEFB0043C04C /* MainMenu.xib */; };
+		810A11B01CF1DEFB0043C04C /* NullpoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11AF1CF1DEFB0043C04C /* NullpoTests.swift */; };
+		810A11BB1CF1DEFB0043C04C /* NullpoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11BA1CF1DEFB0043C04C /* NullpoUITests.swift */; };
+		810A11C91CF1DFC50043C04C /* DraggingZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11C81CF1DFC50043C04C /* DraggingZone.swift */; };
+		810A11CB1CF1E04C0043C04C /* DraggingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11CA1CF1E04C0043C04C /* DraggingIndicator.swift */; };
+		810A11CD1CF1E6980043C04C /* FileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11CC1CF1E6980043C04C /* FileListCell.swift */; };
+		810A11CF1CF1F6020043C04C /* FileListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11CE1CF1F6020043C04C /* FileListData.swift */; };
+		810A11D11CF1F6200043C04C /* HistoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11D01CF1F6200043C04C /* HistoryFile.swift */; };
+		810A11D31CF1F6310043C04C /* UploadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11D21CF1F6310043C04C /* UploadFile.swift */; };
+		810A11D51CF1F6530043C04C /* HistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11D41CF1F6530043C04C /* HistoryData.swift */; };
+		810A11D71CF1F6610043C04C /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11D61CF1F6610043C04C /* Uploader.swift */; };
+		810A11DA1CF1F6870043C04C /* _0x0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11D91CF1F6870043C04C /* _0x0.swift */; };
+		810A11DC1CF1F6990043C04C /* Uguu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11DB1CF1F6990043C04C /* Uguu.swift */; };
+		810A11DE1CF1F6AA0043C04C /* UploaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11DD1CF1F6AA0043C04C /* UploaderProtocol.swift */; };
+		810A11E21CF1F8FE0043C04C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810A11DF1CF1F8FE0043C04C /* Alamofire.framework */; };
+		810A11E31CF1F8FE0043C04C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 810A11DF1CF1F8FE0043C04C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		810A11E41CF1F8FE0043C04C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810A11E01CF1F8FE0043C04C /* Realm.framework */; };
+		810A11E51CF1F8FE0043C04C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 810A11E01CF1F8FE0043C04C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		810A11E61CF1F8FE0043C04C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810A11E11CF1F8FE0043C04C /* RealmSwift.framework */; };
+		810A11E71CF1F8FE0043C04C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 810A11E11CF1F8FE0043C04C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		810A11EB1CF205DC0043C04C /* NullpoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11E91CF205DC0043C04C /* NullpoController.swift */; };
+		810A11EC1CF205DC0043C04C /* NullpoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810A11EA1CF205DC0043C04C /* NullpoController.xib */; };
+		810A11EF1CF2164A0043C04C /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A11ED1CF2164A0043C04C /* HistoryController.swift */; };
+		810A11F01CF2164A0043C04C /* HistoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810A11EE1CF2164A0043C04C /* HistoryController.xib */; };
+		813DE21F1CF38FB900B5CBA8 /* PreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DE21D1CF38FB900B5CBA8 /* PreferenceController.swift */; };
+		813DE2201CF38FB900B5CBA8 /* PreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813DE21E1CF38FB900B5CBA8 /* PreferenceController.xib */; };
+		8182E5541D0FD77E0042ABBC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8182E5531D0FD77E0042ABBC /* Utility.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		810A11AC1CF1DEFB0043C04C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810A11941CF1DEFA0043C04C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 810A119B1CF1DEFA0043C04C;
+			remoteInfo = Nullpo;
+		};
+		810A11B71CF1DEFB0043C04C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810A11941CF1DEFA0043C04C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 810A119B1CF1DEFA0043C04C;
+			remoteInfo = Nullpo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		810A11E81CF1F8FE0043C04C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				810A11E51CF1F8FE0043C04C /* Realm.framework in Embed Frameworks */,
+				810A11E31CF1F8FE0043C04C /* Alamofire.framework in Embed Frameworks */,
+				810A11E71CF1F8FE0043C04C /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		810A119C1CF1DEFA0043C04C /* Nullpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nullpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		810A119F1CF1DEFA0043C04C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		810A11A11CF1DEFB0043C04C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		810A11A41CF1DEFB0043C04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		810A11A61CF1DEFB0043C04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		810A11AB1CF1DEFB0043C04C /* NullpoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NullpoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		810A11AF1CF1DEFB0043C04C /* NullpoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullpoTests.swift; sourceTree = "<group>"; };
+		810A11B11CF1DEFB0043C04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		810A11B61CF1DEFB0043C04C /* NullpoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NullpoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		810A11BA1CF1DEFB0043C04C /* NullpoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullpoUITests.swift; sourceTree = "<group>"; };
+		810A11BC1CF1DEFB0043C04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		810A11C81CF1DFC50043C04C /* DraggingZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggingZone.swift; sourceTree = "<group>"; };
+		810A11CA1CF1E04C0043C04C /* DraggingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggingIndicator.swift; sourceTree = "<group>"; };
+		810A11CC1CF1E6980043C04C /* FileListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListCell.swift; sourceTree = "<group>"; };
+		810A11CE1CF1F6020043C04C /* FileListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListData.swift; sourceTree = "<group>"; };
+		810A11D01CF1F6200043C04C /* HistoryFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryFile.swift; sourceTree = "<group>"; };
+		810A11D21CF1F6310043C04C /* UploadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFile.swift; sourceTree = "<group>"; };
+		810A11D41CF1F6530043C04C /* HistoryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryData.swift; sourceTree = "<group>"; };
+		810A11D61CF1F6610043C04C /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
+		810A11D91CF1F6870043C04C /* _0x0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _0x0.swift; sourceTree = "<group>"; };
+		810A11DB1CF1F6990043C04C /* Uguu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uguu.swift; sourceTree = "<group>"; };
+		810A11DD1CF1F6AA0043C04C /* UploaderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploaderProtocol.swift; sourceTree = "<group>"; };
+		810A11DF1CF1F8FE0043C04C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		810A11E01CF1F8FE0043C04C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/Mac/Realm.framework; sourceTree = "<group>"; };
+		810A11E11CF1F8FE0043C04C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/Mac/RealmSwift.framework; sourceTree = "<group>"; };
+		810A11E91CF205DC0043C04C /* NullpoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullpoController.swift; sourceTree = "<group>"; };
+		810A11EA1CF205DC0043C04C /* NullpoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NullpoController.xib; sourceTree = "<group>"; };
+		810A11ED1CF2164A0043C04C /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		810A11EE1CF2164A0043C04C /* HistoryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryController.xib; sourceTree = "<group>"; };
+		813DE21D1CF38FB900B5CBA8 /* PreferenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceController.swift; sourceTree = "<group>"; };
+		813DE21E1CF38FB900B5CBA8 /* PreferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferenceController.xib; sourceTree = "<group>"; };
+		8182E5531D0FD77E0042ABBC /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		810A11991CF1DEFA0043C04C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				810A11E41CF1F8FE0043C04C /* Realm.framework in Frameworks */,
+				810A11E21CF1F8FE0043C04C /* Alamofire.framework in Frameworks */,
+				810A11E61CF1F8FE0043C04C /* RealmSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810A11A81CF1DEFB0043C04C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810A11B31CF1DEFB0043C04C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		810A11931CF1DEFA0043C04C = {
+			isa = PBXGroup;
+			children = (
+				810A11DF1CF1F8FE0043C04C /* Alamofire.framework */,
+				810A11E01CF1F8FE0043C04C /* Realm.framework */,
+				810A11E11CF1F8FE0043C04C /* RealmSwift.framework */,
+				810A119E1CF1DEFA0043C04C /* Nullpo */,
+				810A11AE1CF1DEFB0043C04C /* NullpoTests */,
+				810A11B91CF1DEFB0043C04C /* NullpoUITests */,
+				810A119D1CF1DEFA0043C04C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		810A119D1CF1DEFA0043C04C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				810A119C1CF1DEFA0043C04C /* Nullpo.app */,
+				810A11AB1CF1DEFB0043C04C /* NullpoTests.xctest */,
+				810A11B61CF1DEFB0043C04C /* NullpoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		810A119E1CF1DEFA0043C04C /* Nullpo */ = {
+			isa = PBXGroup;
+			children = (
+				810A11A61CF1DEFB0043C04C /* Info.plist */,
+				810A119F1CF1DEFA0043C04C /* AppDelegate.swift */,
+				810A11CA1CF1E04C0043C04C /* DraggingIndicator.swift */,
+				810A11C81CF1DFC50043C04C /* DraggingZone.swift */,
+				810A11CC1CF1E6980043C04C /* FileListCell.swift */,
+				810A11CE1CF1F6020043C04C /* FileListData.swift */,
+				810A11ED1CF2164A0043C04C /* HistoryController.swift */,
+				810A11D41CF1F6530043C04C /* HistoryData.swift */,
+				810A11D01CF1F6200043C04C /* HistoryFile.swift */,
+				810A11E91CF205DC0043C04C /* NullpoController.swift */,
+				813DE21D1CF38FB900B5CBA8 /* PreferenceController.swift */,
+				810A11D61CF1F6610043C04C /* Uploader.swift */,
+				810A11D21CF1F6310043C04C /* UploadFile.swift */,
+				8182E5531D0FD77E0042ABBC /* Utility.swift */,
+				810A11A11CF1DEFB0043C04C /* Assets.xcassets */,
+				810A11EE1CF2164A0043C04C /* HistoryController.xib */,
+				810A11EA1CF205DC0043C04C /* NullpoController.xib */,
+				813DE21E1CF38FB900B5CBA8 /* PreferenceController.xib */,
+				810A11A31CF1DEFB0043C04C /* MainMenu.xib */,
+				810A11D81CF1F67C0043C04C /* Uploaders */,
+			);
+			path = Nullpo;
+			sourceTree = "<group>";
+		};
+		810A11AE1CF1DEFB0043C04C /* NullpoTests */ = {
+			isa = PBXGroup;
+			children = (
+				810A11AF1CF1DEFB0043C04C /* NullpoTests.swift */,
+				810A11B11CF1DEFB0043C04C /* Info.plist */,
+			);
+			path = NullpoTests;
+			sourceTree = "<group>";
+		};
+		810A11B91CF1DEFB0043C04C /* NullpoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				810A11BA1CF1DEFB0043C04C /* NullpoUITests.swift */,
+				810A11BC1CF1DEFB0043C04C /* Info.plist */,
+			);
+			path = NullpoUITests;
+			sourceTree = "<group>";
+		};
+		810A11D81CF1F67C0043C04C /* Uploaders */ = {
+			isa = PBXGroup;
+			children = (
+				810A11D91CF1F6870043C04C /* _0x0.swift */,
+				810A11DB1CF1F6990043C04C /* Uguu.swift */,
+				810A11DD1CF1F6AA0043C04C /* UploaderProtocol.swift */,
+			);
+			name = Uploaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		810A119B1CF1DEFA0043C04C /* Nullpo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 810A11BF1CF1DEFB0043C04C /* Build configuration list for PBXNativeTarget "Nullpo" */;
+			buildPhases = (
+				810A11981CF1DEFA0043C04C /* Sources */,
+				810A11991CF1DEFA0043C04C /* Frameworks */,
+				810A119A1CF1DEFA0043C04C /* Resources */,
+				810A11E81CF1F8FE0043C04C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nullpo;
+			productName = Nullpo;
+			productReference = 810A119C1CF1DEFA0043C04C /* Nullpo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		810A11AA1CF1DEFB0043C04C /* NullpoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 810A11C21CF1DEFB0043C04C /* Build configuration list for PBXNativeTarget "NullpoTests" */;
+			buildPhases = (
+				810A11A71CF1DEFB0043C04C /* Sources */,
+				810A11A81CF1DEFB0043C04C /* Frameworks */,
+				810A11A91CF1DEFB0043C04C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				810A11AD1CF1DEFB0043C04C /* PBXTargetDependency */,
+			);
+			name = NullpoTests;
+			productName = NullpoTests;
+			productReference = 810A11AB1CF1DEFB0043C04C /* NullpoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		810A11B51CF1DEFB0043C04C /* NullpoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 810A11C51CF1DEFB0043C04C /* Build configuration list for PBXNativeTarget "NullpoUITests" */;
+			buildPhases = (
+				810A11B21CF1DEFB0043C04C /* Sources */,
+				810A11B31CF1DEFB0043C04C /* Frameworks */,
+				810A11B41CF1DEFB0043C04C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				810A11B81CF1DEFB0043C04C /* PBXTargetDependency */,
+			);
+			name = NullpoUITests;
+			productName = NullpoUITests;
+			productReference = 810A11B61CF1DEFB0043C04C /* NullpoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		810A11941CF1DEFA0043C04C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Hamuko;
+				TargetAttributes = {
+					810A119B1CF1DEFA0043C04C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					810A11AA1CF1DEFB0043C04C = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 810A119B1CF1DEFA0043C04C;
+					};
+					810A11B51CF1DEFB0043C04C = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 810A119B1CF1DEFA0043C04C;
+					};
+				};
+			};
+			buildConfigurationList = 810A11971CF1DEFA0043C04C /* Build configuration list for PBXProject "Nullpo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 810A11931CF1DEFA0043C04C;
+			productRefGroup = 810A119D1CF1DEFA0043C04C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				810A119B1CF1DEFA0043C04C /* Nullpo */,
+				810A11AA1CF1DEFB0043C04C /* NullpoTests */,
+				810A11B51CF1DEFB0043C04C /* NullpoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		810A119A1CF1DEFA0043C04C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				810A11F01CF2164A0043C04C /* HistoryController.xib in Resources */,
+				810A11A21CF1DEFB0043C04C /* Assets.xcassets in Resources */,
+				813DE2201CF38FB900B5CBA8 /* PreferenceController.xib in Resources */,
+				810A11EC1CF205DC0043C04C /* NullpoController.xib in Resources */,
+				810A11A51CF1DEFB0043C04C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810A11A91CF1DEFB0043C04C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810A11B41CF1DEFB0043C04C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		810A11981CF1DEFA0043C04C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				810A11D51CF1F6530043C04C /* HistoryData.swift in Sources */,
+				810A11EB1CF205DC0043C04C /* NullpoController.swift in Sources */,
+				810A11D11CF1F6200043C04C /* HistoryFile.swift in Sources */,
+				810A11C91CF1DFC50043C04C /* DraggingZone.swift in Sources */,
+				810A11D71CF1F6610043C04C /* Uploader.swift in Sources */,
+				810A11CD1CF1E6980043C04C /* FileListCell.swift in Sources */,
+				810A11CB1CF1E04C0043C04C /* DraggingIndicator.swift in Sources */,
+				810A11DA1CF1F6870043C04C /* _0x0.swift in Sources */,
+				813DE21F1CF38FB900B5CBA8 /* PreferenceController.swift in Sources */,
+				810A11DE1CF1F6AA0043C04C /* UploaderProtocol.swift in Sources */,
+				810A11DC1CF1F6990043C04C /* Uguu.swift in Sources */,
+				810A11EF1CF2164A0043C04C /* HistoryController.swift in Sources */,
+				8182E5541D0FD77E0042ABBC /* Utility.swift in Sources */,
+				810A11D31CF1F6310043C04C /* UploadFile.swift in Sources */,
+				810A11CF1CF1F6020043C04C /* FileListData.swift in Sources */,
+				810A11A01CF1DEFA0043C04C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810A11A71CF1DEFB0043C04C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				810A11B01CF1DEFB0043C04C /* NullpoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810A11B21CF1DEFB0043C04C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				810A11BB1CF1DEFB0043C04C /* NullpoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		810A11AD1CF1DEFB0043C04C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 810A119B1CF1DEFA0043C04C /* Nullpo */;
+			targetProxy = 810A11AC1CF1DEFB0043C04C /* PBXContainerItemProxy */;
+		};
+		810A11B81CF1DEFB0043C04C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 810A119B1CF1DEFA0043C04C /* Nullpo */;
+			targetProxy = 810A11B71CF1DEFB0043C04C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		810A11A31CF1DEFB0043C04C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				810A11A41CF1DEFB0043C04C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		810A11BD1CF1DEFB0043C04C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		810A11BE1CF1DEFB0043C04C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		810A11C01CF1DEFB0043C04C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Nullpo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.hamuko.Nullpo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		810A11C11CF1DEFB0043C04C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Nullpo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.hamuko.Nullpo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		810A11C31CF1DEFB0043C04C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NullpoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.hamuko.NullpoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nullpo.app/Contents/MacOS/Nullpo";
+			};
+			name = Debug;
+		};
+		810A11C41CF1DEFB0043C04C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NullpoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.hamuko.NullpoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nullpo.app/Contents/MacOS/Nullpo";
+			};
+			name = Release;
+		};
+		810A11C61CF1DEFB0043C04C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NullpoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.hamuko.NullpoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Nullpo;
+			};
+			name = Debug;
+		};
+		810A11C71CF1DEFB0043C04C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NullpoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.hamuko.NullpoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Nullpo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		810A11971CF1DEFA0043C04C /* Build configuration list for PBXProject "Nullpo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				810A11BD1CF1DEFB0043C04C /* Debug */,
+				810A11BE1CF1DEFB0043C04C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		810A11BF1CF1DEFB0043C04C /* Build configuration list for PBXNativeTarget "Nullpo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				810A11C01CF1DEFB0043C04C /* Debug */,
+				810A11C11CF1DEFB0043C04C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		810A11C21CF1DEFB0043C04C /* Build configuration list for PBXNativeTarget "NullpoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				810A11C31CF1DEFB0043C04C /* Debug */,
+				810A11C41CF1DEFB0043C04C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		810A11C51CF1DEFB0043C04C /* Build configuration list for PBXNativeTarget "NullpoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				810A11C61CF1DEFB0043C04C /* Debug */,
+				810A11C71CF1DEFB0043C04C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 810A11941CF1DEFA0043C04C /* Project object */;
+}
