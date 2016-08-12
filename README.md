@@ -10,6 +10,6 @@ Nullpo is a simple drag-and-drop file uploader for OS X that allows to upload fi
 
 ## Installation
 
-Pre-built application bundles can be found on the [Releases](https://github.com/Hamuko/Nullpo/releases) page. The releases are not signed so they will Gatekeeper. Use Google if this becomes an issue for you.
+Pre-built application bundles can be found on the [Releases](https://github.com/Hamuko/Nullpo/releases) page. The releases are not signed so they will trip Gatekeeper. Use Google if this becomes an issue for you.
 
 If you wish to compile Nullpo by yourself, install the dependencies with [Carthage](https://github.com/Carthage/Carthage) by running `carthage bootstrap` in the project directory.
