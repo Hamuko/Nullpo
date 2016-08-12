@@ -1,6 +1,8 @@
 # Nullpo
 
 [![Build Status](https://travis-ci.org/Hamuko/Nullpo.svg?branch=master)](https://travis-ci.org/Hamuko/Nullpo)
+[![GitHub release](https://img.shields.io/github/release/Hamuko/Nullpo.svg?maxAge=86400)](https://github.com/Hamuko/Nullpo/releases/latest)
+[![Github All Releases](https://img.shields.io/github/downloads/Hamuko/Nullpo/total.svg?maxAge=21600)](https://github.com/Hamuko/Nullpo/releases)
 
 ## Description
 
