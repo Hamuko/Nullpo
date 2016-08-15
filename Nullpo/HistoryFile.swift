@@ -5,7 +5,7 @@ class HistoryFile: RealmSwift.Object {
     dynamic var url: String = ""
     dynamic var date: NSDate = NSDate()
     dynamic var expires: NSDate?
-    
+
     convenience init(file: UploadFile) {
         self.init()
         self.url = file.url!

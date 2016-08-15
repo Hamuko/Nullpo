@@ -5,31 +5,30 @@ class NullpoController: NSWindowController {
     @IBOutlet weak var fileTable: NSTableView!
     @IBOutlet weak var progressBar: NSProgressIndicator!
     var controlsLocked = false
-    
 
     convenience init() {
         self.init(windowNibName: "NullpoController")
     }
-    
+
     override func windowDidLoad() {
         super.windowDidLoad()
         let doubleClickSelector: Selector = #selector(HistoryController.tableDoubleClicked(_:))
         fileTable.doubleAction = doubleClickSelector
         fileTable.target = self
     }
-    
+
     /// Clears one or more selected URLs.
     func clear(sender: AnyObject) {
         for index in fileTable.selectedRowIndexes.reverse() {
             fileStorage.remove(index)
         }
     }
-    
+
     /// Clears all the URLs in window.
     func clearAll(sender: AnyObject) {
         self.fileStorage.clearFiles()
     }
-    
+
     /// Copies one or more selected URLs.
     func copy(sender: AnyObject) {
         var copyString: String = ""
@@ -39,7 +38,7 @@ class NullpoController: NSWindowController {
         }
         Utility.copyURL(copyString)
     }
-    
+
     /// Returns a boolean value indicating whether a row is selected or not.
     func isRowSelected() -> Bool {
         if fileTable.selectedRow > -1 {
@@ -48,14 +47,14 @@ class NullpoController: NSWindowController {
             return false
         }
     }
-    
+
     /// Opens one or more selected URLs in the default application.
     func openDocument(sender: AnyObject) {
         for index in fileTable.selectedRowIndexes {
             Utility.openURL(fileStorage.fileList[index].url!)
         }
     }
-    
+
     func saveDocumentAs(sender: AnyObject) {
         let fileDialog = NSSavePanel()
         fileDialog.allowedFileTypes = ["txt"]
@@ -77,16 +76,16 @@ class NullpoController: NSWindowController {
             }
         })
     }
-    
+
     func tableDoubleClicked(sender: AnyObject) {
         guard let row: Int = fileTable.clickedRow where row > -1 else {
             // Invalid row has been double-clicked.
             return
         }
         let cell: FileListCell = fileTable.viewAtColumn(0, row: row, makeIfNecessary: false) as! FileListCell
-        cell.openURL();
+        cell.openURL()
     }
-    
+
     func updateProgressBar(progress: Double) {
         NSAnimationContext.beginGrouping()
         NSAnimationContext.currentContext().duration = 0.5
@@ -99,7 +98,7 @@ class NullpoController: NSWindowController {
         self.progressBar.displayIfNeeded()
         NSAnimationContext.endGrouping()
     }
-    
+
     func upload(files: [NSURL]) {
         controlsLocked = true
 
@@ -116,7 +115,7 @@ class NullpoController: NSWindowController {
         }
         uploader.upload()
     }
-    
+
     func uploadCompletedNotification(uploadedFileCount: Int) {
         let center: NSUserNotificationCenter = NSUserNotificationCenter.defaultUserNotificationCenter()
         let notification: NSUserNotification = NSUserNotification()
@@ -129,7 +128,7 @@ class NullpoController: NSWindowController {
         }
         center.deliverNotification(notification)
     }
-    
+
     /// Opens a file dialog that accepts multiple files at once and uploads them.
     func uploadDialog(sender: AnyObject) {
         let fileDialog = NSOpenPanel()
@@ -151,4 +150,5 @@ class NullpoController: NSWindowController {
             return true
         }
     }
+
 }
