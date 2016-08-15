@@ -6,4 +6,6 @@ engines:
 ratings:
   paths:
     - "**.swift"
-exclude_paths: []
+exclude_paths:
+  - Nullpo.xcodeproj/**/*
+  - Nullpo/Assets.xcassets/**/*

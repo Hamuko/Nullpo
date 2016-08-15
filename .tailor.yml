@@ -1,0 +1,4 @@
+include:
+  - Nullpo
+except:
+  - upper-camel-case
