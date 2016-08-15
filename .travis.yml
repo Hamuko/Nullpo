@@ -1,12 +1,15 @@
 language: objective-c
 osx_image: xcode7.3
+cache:
+  directories:
+  - Carthage
 before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
 install:
 - agvtool new-version -all $TRAVIS_BUILD_NUMBER
 - agvtool new-marketing-version `git describe --tags --abbrev=0`
-- carthage bootstrap --verbose
+- if ! cmp -s Cartfile.resolved Carthage/Cartfile.resolved; then carthage bootstrap --verbose && cp Cartfile.resolved Carthage/; fi
 - xcodebuild
 before_deploy:
 - brew install zopfli
