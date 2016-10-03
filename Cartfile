@@ -1,2 +1,2 @@
-github "Alamofire/Alamofire" ~> 3.4
+github "Alamofire/Alamofire" ~> 3.5
 github "realm/realm-cocoa"
