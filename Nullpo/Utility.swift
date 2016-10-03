@@ -4,7 +4,7 @@ class Utility {
 
     /// Copies the given NSURL to clipboard.
     static func copyURL(url: NSURL) {
-        copyURL(url.absoluteString)
+        copyURL(url.absoluteString!)
     }
 
     /// Copies the given String to clipboard.
