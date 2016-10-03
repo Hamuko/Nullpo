@@ -1,5 +1,7 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
+env:
+  - SWIFT_VERSION=2.3
 cache:
   directories:
   - Carthage
@@ -9,7 +11,7 @@ before_install:
 install:
 - agvtool new-version -all $TRAVIS_BUILD_NUMBER
 - agvtool new-marketing-version `git describe --tags --abbrev=0`
-- if ! cmp -s Cartfile.resolved Carthage/Cartfile.resolved; then carthage bootstrap --verbose && cp Cartfile.resolved Carthage/; fi
+- if ! cmp -s Cartfile.resolved Carthage/Cartfile.resolved; then carthage bootstrap --platform macOS --toolchain com.apple.dt.toolchain.Swift_2_3 --no-use-binaries --verbose && cp Cartfile.resolved Carthage/; fi
 - xcodebuild
 before_deploy:
 - brew install zopfli
