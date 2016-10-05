@@ -18,7 +18,7 @@ class UploadGroup {
     ]
 
     init(files: [NSURL], fileStorage: FileListData) {
-        self.files = files.sort { $0.lastPathComponent < $1.lastPathComponent }
+        self.files = files.sort { $0.lastPathComponent?.localizedStandardCompare($1.lastPathComponent!) == NSComparisonResult.OrderedAscending }
         self.uploader = UploadGroup.preferredUploader()
         self.storage = fileStorage
 
