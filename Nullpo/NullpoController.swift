@@ -4,6 +4,7 @@ class NullpoController: NSWindowController {
     @IBOutlet var fileStorage: FileListData!
     @IBOutlet weak var fileTable: NSTableView!
     @IBOutlet weak var progressBar: NSProgressIndicator!
+    @IBOutlet weak var bottomBarText: NSTextField!
     var controlsLocked = false
 
     convenience init() {
@@ -22,11 +23,13 @@ class NullpoController: NSWindowController {
         for index in fileTable.selectedRowIndexes.reverse() {
             fileStorage.remove(index)
         }
+        self.updateBottomBarText()
     }
 
     /// Clears all the URLs in window.
     func clearAll(sender: AnyObject) {
         self.fileStorage.clearFiles()
+        self.updateBottomBarText()
     }
 
     /// Copies one or more selected URLs.
@@ -92,11 +95,27 @@ class NullpoController: NSWindowController {
         self.progressBar.doubleValue += progress * 100.0
         if self.progressBar.doubleValue >= 99.90 {
             self.progressBar.hidden = true
+            self.bottomBarText.hidden = false
         } else {
             self.progressBar.hidden = false
+            self.bottomBarText.hidden = true
         }
         self.progressBar.displayIfNeeded()
         NSAnimationContext.endGrouping()
+    }
+
+    /// Updates the bottom bar text label's text and visibility.
+    func updateBottomBarText() {
+        if fileStorage.count == 1 {
+            bottomBarText.stringValue = "\(fileStorage.count) item"
+        } else {
+            bottomBarText.stringValue = "\(fileStorage.count) items"
+        }
+        if fileStorage.count > 0 {
+            bottomBarText.hidden = false
+        } else {
+            bottomBarText.hidden = true
+        }
     }
 
     func upload(files: [NSURL]) {
@@ -109,6 +128,7 @@ class NullpoController: NSWindowController {
         uploader.onCompletion = {
             self.progressBar.doubleValue = 0
             self.progressBar.hidden = true
+            self.updateBottomBarText()
             self.fileStorage.sort(uploader.uploadedFileCount)
             self.uploadCompletedNotification(uploader.uploadedFileCount)
             self.controlsLocked = false

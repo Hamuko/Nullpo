@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NullpoController" customModule="Nullpo" customModuleProvider="target">
             <connections>
+                <outlet property="bottomBarText" destination="sJP-Ga-yV8" id="hbU-vM-R8O"/>
                 <outlet property="fileStorage" destination="PAh-lX-VDu" id="PAJ-2S-Xw6"/>
                 <outlet property="fileTable" destination="rjE-YX-agH" id="YDn-XB-bin"/>
                 <outlet property="progressBar" destination="Tg5-Zm-su0" id="0M1-xh-wyX"/>
@@ -137,13 +138,23 @@
                     <progressIndicator hidden="YES" wantsLayer="YES" maxValue="100" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Tg5-Zm-su0">
                         <rect key="frame" x="10" y="5" width="180" height="12"/>
                     </progressIndicator>
+                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sJP-Ga-yV8">
+                        <rect key="frame" x="79" y="4" width="43" height="14"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 items" id="f3g-sO-17W">
+                            <font key="font" metaFont="system" size="11"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="lla-gH-aCa" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="6Af-Sg-htx"/>
                     <constraint firstItem="Tg5-Zm-su0" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="10" id="ZPw-zT-iRH"/>
+                    <constraint firstAttribute="bottom" secondItem="sJP-Ga-yV8" secondAttribute="bottom" constant="4" id="ZtS-o4-ps6"/>
                     <constraint firstItem="lla-gH-aCa" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="jBl-hm-4eD"/>
                     <constraint firstAttribute="trailing" secondItem="lla-gH-aCa" secondAttribute="trailing" id="l7A-Oe-ziY"/>
                     <constraint firstAttribute="trailing" secondItem="Tg5-Zm-su0" secondAttribute="trailing" constant="10" id="qTI-Va-5Ak"/>
+                    <constraint firstItem="sJP-Ga-yV8" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="rie-U5-Owp"/>
                     <constraint firstAttribute="bottom" secondItem="Tg5-Zm-su0" secondAttribute="bottom" constant="5" id="xx1-By-DD8"/>
                     <constraint firstAttribute="bottom" secondItem="lla-gH-aCa" secondAttribute="bottom" constant="22" id="zCC-gg-SZh"/>
                 </constraints>
@@ -159,5 +170,6 @@
                 <outlet property="fileTable" destination="rjE-YX-agH" id="hIc-0g-Jez"/>
             </connections>
         </customObject>
+        <userDefaultsController representsSharedInstance="YES" id="M4w-ne-xxi"/>
     </objects>
 </document>
